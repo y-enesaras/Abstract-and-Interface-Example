@@ -19,14 +19,14 @@ public abstract class Donanım
     public string Ram { get; set; }
     public abstract void DonanimiGetir();
 }
-public interface Tasarim
+public interface ITasarim
 {
     void EkranPaneli();
     void Isiklandirma();
     void EkranBoyutu();
     void Kamera();
 }
-public interface EkBilgiler
+public interface IEkBilgiler
 {
     void GarantiSuresi();
     void AnakartBosOlanSlotlar();
@@ -97,7 +97,7 @@ public class DonanimBilesenleri : Donanım
         }
     }
 }
-public class GerekliBilgiler : Tasarim, EkBilgiler
+public class GerekliBilgiler : ITasarim, IEkBilgiler
 {
     public void EkranPaneli()
     { 
